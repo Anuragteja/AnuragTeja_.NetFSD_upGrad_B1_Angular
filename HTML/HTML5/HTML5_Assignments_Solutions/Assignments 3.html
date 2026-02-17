@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Course Registration Portal</title>
+</head>
+<body>
+    <header>
+        <h1>GlobalTech E-Learning Platform</h1>
+        <h2>Certification Program Registration</h2>
+    </header>
+    <main>
+        <section>
+            <h3>Course Introduction</h3>
+            <video width="600" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/webm">
+                <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" default>
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section>
+            <h3>Enrollment Progress</h3>
+            <progress value="60" max="100"></progress>
+        </section>
+        <section>
+            <form action="#" method="post">
+                <table border="1" cellpadding="8">
+                    <tr>
+                        <td>Full Name</td>
+                        <td><input type="text" name="fullname" required autofocus></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Select Course</td>
+                        <td>
+                            <input list="courses" name="course" required placeholder="Type or select course">
+                            <datalist id="courses">
+                                <option value="Full Stack Web Development">
+                                <option value="Data Science Certification">
+                                <option value="Artificial Intelligence">
+                                <option value="Cybersecurity Professional">
+                                <option value="Cloud Computing">
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Select Batch Month</td>
+                        <td><input type="month" name="batchmonth" required></td>
+                    </tr>
+                    <tr>
+                        <td>Preferred Session Timing</td>
+                        <td><input type="time" name="sessiontime" required></td>
+                    </tr>
+                    <tr>
+                        <td>Rate Your Skill Level (1-10)</td>
+                        <td>
+                            <input type="range" name="skill" min="1" max="10" value="5" required>
+                            <meter min="1" max="10" value="5"></meter>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="watchconfirm" required></td>
+                        <td>I have watched the introduction video before enrolling</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Enroll Now">
+                            <input type="reset" value="Clear">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 GlobalTech E-Learning Platform. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

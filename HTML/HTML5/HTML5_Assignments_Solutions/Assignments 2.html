@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Appointment Booking</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>CityCare Hospital</h1>
+        <h2>Online Appointment Booking System</h2>
+    </header>
+
+    <main>
+
+        <section>
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <table border="1" cellpadding="8">
+
+                    <tr>
+                        <td>Full Name</td>
+                        <td><input type="text" name="fullname" required autofocus></td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td><input type="number" name="age" min="0" max="120" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td><input type="tel" name="phone" pattern="[0-9]{10}" maxlength="10" required placeholder="10 digit number"></td>
+                    </tr>
+                    <tr>
+                        <td>Select Department</td>
+                        <td>
+                            <input list="departments" name="department" required placeholder="Type department">
+                            <datalist id="departments"></option>
+                                <option value="Cardiology"></option>
+                                <option value="Neurology"></option>
+                                <option value="Orthopedics"></option>
+                                <option value="Pediatrics"></option>
+                                <option value="Dermatology"></option>
+                                <option value="General Medicine"></option>
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Preferred Doctor</td>
+                        <td>
+                            <input list="doctors" name="doctor" required placeholder="Select or type doctor name">
+                            <datalist id="doctors">
+                                <option value="Dr.Anu"></option>
+                                <option value="Dr.Jethin"></option>
+                                <option value="Dr. Pavan"></option>
+                                <option value="Dr. Bharath"></option>
+                                <option value="Dr. Deva"></option>
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Appointment Date</td>
+                        <td><input type="date" name="appointmentdate" min="2026-02-17" required></td>
+                    </tr>
+                    <tr>
+                        <td>Appointment Time</td>
+                        <td><input type="time" name="appointmenttime" id="appointmenttime" required></td>
+                    </tr>
+                    <tr>
+                        <td>Emergency Case</td>
+                        <td>
+                            <input type="checkbox" name="emergency">
+                            Yes, this is an emergency
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload Medical Reports</td>
+                        <td><input type="file" name="reports" multiple required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Book Appointment">
+                            <input type="reset" value="Clear">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <footer>
+    <p>&copy; 2026 CityCare Hospital. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

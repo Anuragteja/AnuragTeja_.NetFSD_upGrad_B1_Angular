@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Banking Account Opening</title>
+</head>
+<body>
+    <header>
+        <h1>BankOnline - Open Savings Account</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Account Opening Form</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <table border="1" cellpadding="8">
+                    <tr>
+                        <td>Full Name</td>
+                        <td><input type="text" name="fullname" required autofocus></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td><input type="tel" name="phone" pattern="[0-9]{10}" required placeholder="10-digit number"></td>
+                    </tr>
+                    <tr>
+                        <td>PAN Number</td>
+                        <td><input type="text" name="pan" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" required placeholder="ABCDE1234F"></td>
+                    </tr>
+                    <tr>
+                        <td>IFSC Code</td>
+                        <td><input type="text" name="ifsc" pattern="[A-Z]{4}[0-9]{7}" required placeholder="ABCD1234567"></td>
+                    </tr>
+                    <tr>
+                        <td>Account Type</td>
+                        <td>
+                            <input list="accounttypes" name="accounttype" required placeholder="Select or type account type">
+                            <datalist id="accounttypes">
+                                <option value="Savings"></option>
+                                <option value="Current"></option>
+                                <option value="Salary"></option>
+                                <option value="Fixed Deposit"></option>
+                                <option value="Recurring Deposit"></option>
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td><input type="date" name="dob" required></td>
+                    </tr>
+                    <tr>
+                        <td>Monthly Income</td>
+                        <td><input type="number" name="income" min="0" step="1000" required placeholder="Enter your monthly income"></td>
+                    </tr>
+                    <tr>
+                        <td>Upload ID Proof</td>
+                        <td><input type="file" name="idproof" accept=".jpg,.jpeg,.png,.pdf" required multiple></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Open Account">
+                            <input type="reset" value="Clear">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 BankOnline. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
