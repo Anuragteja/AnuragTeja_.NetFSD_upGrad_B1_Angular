@@ -1,0 +1,41 @@
+nav{
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.HeroSection{
+    padding: 20px;
+    text-align: center;
+    background-color: aliceblue;
+}
+.Course {
+    display: flex;
+    justify-content:space-evenly;
+    gap: 40px;
+}
+.Course1 img {
+    width: 100%;
+}
+
+.Course1 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+}
+.TestimonialsSection{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: rgb(99, 168, 168);
+
+}
+.Testimonials{
+    text-align: center;
+   
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: antiquewhite;
+}
