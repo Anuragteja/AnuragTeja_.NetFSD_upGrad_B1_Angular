@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="taskInput">
+    <button id="addBtn">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        document.getElementById('addBtn').addEventListener('click', function () {
+            let input = document.getElementById('taskInput');
+            let li1 = document.createElement('li');
+            li1.innerText = input.value;
+            document.getElementById('taskList').appendChild(li1);
+            input.value = "";
+        });
+    </script>
+
+</body>
+</html>

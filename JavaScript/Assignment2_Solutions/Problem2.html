@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+</head>
+<body>
+
+    <button id="showBtn">Display User Info</button>
+
+    <div id="output"></div>
+
+    <script>
+        var user = {
+            name: "Rahul",
+            age: 25,
+            city: "Mumbai"
+        };
+
+        function displayUserInfo(userObj) {
+            var container = document.getElementById("output");
+            container.innerHTML = "";
+
+            var p1 = document.createElement("p");
+            p1.innerText = "Name: " + userObj.name;
+
+            var p2 = document.createElement("p");
+            p2.innerText = "Age: " + userObj.age;
+
+            var p3 = document.createElement("p");
+            p3.innerText = "City: " + userObj.city;
+
+            container.appendChild(p1);
+            container.appendChild(p2);
+            container.appendChild(p3);
+        }
+
+        document.getElementById("showBtn").addEventListener('click',function () {
+            displayUserInfo(user);
+        });
+    </script>
+
+</body>
+</html>

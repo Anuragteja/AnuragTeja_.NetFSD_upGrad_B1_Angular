@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+</head>
+<body>
+
+    <button id="showProfileBtn">Show Profile</button>
+    <input type="number" id="marksInput" placeholder="Enter new marks">
+    <button id="updateMarksBtn">Update Marks</button>
+
+    <div id="profile"></div>
+
+    <script>
+        var student = {
+            name: "Amit",
+            rollNo: 101,
+            marks: 85
+        };
+
+        function updateStudentProfile(studentObj) {
+            var container = document.getElementById("profile");
+            container.innerHTML = "";
+
+            var card = document.createElement("div");
+
+            var p1 = document.createElement("p");
+            p1.innerText = "Name: " + studentObj.name;
+
+            var p2 = document.createElement("p");
+            p2.innerText = "Roll No: " + studentObj.rollNo;
+
+            var p3 = document.createElement("p");
+            p3.innerText = "Marks: " + studentObj.marks;
+
+            card.appendChild(p1);
+            card.appendChild(p2);
+            card.appendChild(p3);
+
+            container.appendChild(card);
+        }
+
+        function updateMarks(newMarks) {
+            student.marks = newMarks;
+            updateStudentProfile(student);
+        }
+
+        document.getElementById("showProfileBtn").addEventListener("click", function () {
+            updateStudentProfile(student);
+        });
+
+        document.getElementById("updateMarksBtn").addEventListener("click", function () {
+            var newValue = document.getElementById("marksInput").value;
+            if (newValue !== "") {
+                updateMarks(Number(newValue));
+            }
+        });
+    </script>
+
+</body>
+</html>
