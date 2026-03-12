@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../HandsOnClassesAndObjects/HandsOnClassesAndObjects.csproj" />
+  <Project Path="HandsOnReadingValueFromConsole.csproj" />
+</Solution>
