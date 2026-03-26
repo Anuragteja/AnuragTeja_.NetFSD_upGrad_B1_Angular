@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>students</title>
+</head>
+<body>
+    @{
+        List<string>? names = ViewData["names"] as List<string>;
+    }
+
+    @if (names != null)
+    {
+        foreach (var name in names)
+        {
+            <h4 class="text-info">@name</h4>
+            <hr />
+        }
+    }
+</body>
+</html>

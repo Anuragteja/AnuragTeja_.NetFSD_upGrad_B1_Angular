@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <p>My name is @ViewData["name"] and Age is @ViewData["age"]</p>
+
+    
+    @if ((int)ViewData["age"] >= 18)
+    {
+        <p>Eligible for vote</p>
+    }
+    else
+    {
+        <p>Not eligible for vote</p>
+    }
+</body>
+</html>
